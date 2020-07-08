@@ -1,0 +1,19 @@
+.steve-center {
+    text-align: center;
+}
+
+table {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.steve-tab {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 auto;
+    border: 1px solid black;
+}
