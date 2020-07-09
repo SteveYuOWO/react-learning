@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import './index.css'
-import App from './App.jsx'
-
+import { BrowserRouter } from 'react-router-dom'
+import ApiRouter from './ApiRouter'
+// Router 
+// HashRouter 带#，刷新不会丢失
+// BrowserRouter 不带#，通过history进行切换，刷新会丢失，本地不会
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ApiRouter />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

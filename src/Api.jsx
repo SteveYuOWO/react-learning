@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Axios from 'axios'
 
 export class Api extends Component {
     state = {
@@ -7,8 +8,13 @@ export class Api extends Component {
     async componentDidMount() {
         let url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=bitcoin&format=json&origin=*'
         try {
-            this.setState({
-                data: await (await fetch(url)).json()
+            // this.setState({
+            //     data: await (await fetch(url)).json()
+            // })
+            Axios.get(url).then((data)=>{
+                this.setState({
+                    data: data['data'][1]
+                })
             })
         } catch(error) {
             alert(error)
